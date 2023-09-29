@@ -1,0 +1,36 @@
+
+ @font-face {
+  font-family: 'kanit';
+  src: url('font/Kanit-Regular.ttf');
+ }
+  @font-face {
+  font-family: 'Oswald';
+  src: url('font/Oswald-VariableFont_wght.ttf');
+ }
+
+@font-face {
+  font-family: 'Gabarito';
+  src: url('font/Gabarito-VariableFont_wght.ttf');
+ }
+
+ h1,h2,h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+ }
+
+ p,label {
+  font-family: "kanit", sans-serif;
+ }
+
+ body {
+  background-color: #E9E7E4;
+ }
+
+ #pizza-order-card {
+  background-color: #FFFFFF;
+ }
+
+ .button1 {
+  background-color: #FCB541;
+  color: white;
+ }
