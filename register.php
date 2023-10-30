@@ -1,4 +1,5 @@
 <?php
+
 include('config/db_connect.php');
 $username = $password = $email = $firstName = $firstName =  $lastName = $telephone = '';
 $errors = array('username' => '', 'password' => '', 'email' => '', $firstName => '', $lastName => '', $telephone = '');
@@ -97,12 +98,12 @@ if (isset($_POST['add'])) {
         $email = mysqli_real_escape_string($conn, $_POST['email']);
 
         //create sql
-        $sql = "INSERT INTO users(username,`password`,firstName,lastName,telephone,email) VALUES('$username', '$hashPassword', '$firstName', '$lastName', '$telephone', '$email')";
+        $sql = "INSERT INTO users(username,`password`,firstName,lastName,telephone,email,`image`) VALUES('$username', '$hashPassword', '$firstName', '$lastName', '$telephone', '$email', '')";
 
         //save to database and check
         if (mysqli_query($conn, $sql)) {
             //success
-            header('location: index.php');
+            header('location: login.php');
 
         } else {
             //failure

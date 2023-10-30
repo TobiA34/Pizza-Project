@@ -34,3 +34,7 @@
   background-color: #FCB541;
   color: white;
  }
+ 
+ .navbar-collapse.in {
+    display: block !important;
+}

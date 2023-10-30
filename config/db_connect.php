@@ -1,4 +1,6 @@
 <?php
+// $conn = mysqli_connect('', '', '', '');
+
 $conn = mysqli_connect('localhost', 'test1', 'pokemoN12', 'tobi_pizza');
 
 if (!$conn) {

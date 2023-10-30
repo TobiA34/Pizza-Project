@@ -66,7 +66,6 @@ if (isset($_POST['add'])) {
         <div class="col-sm-6 mx-auto">
             <div class="card m-5 text-center rounded w-80">
                 <div class="card-body ">
-                    <img src="image/pizza.png" class="mx-auto img-thumbnail w-25 h-25  m-2 p-2 ">
                     <div class="form-group form-check">
                         <form action="pizza.php" method="post">
 

@@ -1,5 +1,10 @@
 <?php
 
+session_start();
+
+$success = 0;
+$invalid = 0;
+
 include('config/db_connect.php');
 // Define $myusername and $mypassword
 $username = $_POST['username'];
@@ -17,23 +22,29 @@ $hash = password_hash($password, PASSWORD_DEFAULT);
 $sql = "SELECT * FROM users where username='" . $username . "'";
 $result = mysqli_query($conn, $sql);
 
-if ($result) {
-    if (mysqli_num_rows($result) == 1) {
-        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-        $hashedPassword = $row['password'];
-        if (password_verify($password, $hashedPassword)) {
-            $_SESSION['user_id'] = $row['id'];
-            $_SESSION['username'] = $row['username'];
-            $_SESSION['password'] = $row['password'];
-            $_SESSION['firstName'] = $row['firstname'];
-            $_SESSION['lastName'] = $row['lastname'];
-            $_SESSION['email'] = $row['email'];
-            $_SESSION['telephone'] = $row['telephone'];
+if (isset($_POST['login'])) {
 
-            header('location: pizza.php');
+    if ($result) {
+        if (mysqli_num_rows($result) == 1) {
+            $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+            $hashedPassword = $row['password'];
+            if (password_verify($password, $hashedPassword)) {
+                $_SESSION['user_id'] = $row['id'];
+                $_SESSION['username'] = $row['username'];
+                $_SESSION['password'] = $row['password'];
+                $_SESSION['firstName'] = $row['firstname'];
+                $_SESSION['lastName'] = $row['lastname'];
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['telephone'] = $row['telephone'];
+                $success = 1;
+                header('location: pizza.php');
+            } else {
+                $invalid = 1;
+            }
         }
     }
 }
+
 ?>
 
 <!doctype html>
@@ -46,7 +57,10 @@ if ($result) {
 
 <body>
     <?php include('templates/header.php'); ?>
-    <h1 class="text-center mt-5 mb-5">Login</h1>
+    <div class="container">
+        
+    </div>
+    <h1 class="text-center mt-5 mb-5" id="login">Login</h1>
     <div class="row">
         <div class="col-sm-6 mx-auto">
             <div class="card m-5 text-center rounded w-80 ">
@@ -63,7 +77,16 @@ if ($result) {
                             <label>Password</label>
                             <input type="password" name="password" class="form-control w-75 mx-auto" placeholder="Enter password" id="password">
 
+                            <label>Confirmed password</label>
+                            <input type="password" name="password" class="form-control w-75 mx-auto" placeholder="Enter comfired password" id="password">
+
                             <input type="checkbox" onclick="myFunction()">Show Password
+
+                            <?php if ($invalid) : ?>
+                                <div class="alert alert-danger" role="alert">
+                                    Wrong password
+                                </div>
+                            <?php endif ?>
 
 
                             <!-- Add Button -->
