@@ -4,32 +4,11 @@
         <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1">
             <!-- Section: Social media -->
             <section class="d-flex justify-content-between p-4 text-white" style="background-color: #21D192">
-                <!-- Left -->
-                <div class="me-5">
-                    <span>More information:</span>
-                </div>
-                <!-- Left -->
+
 
                 <!-- Right -->
                 <div>
-                    <a href="" class="text-white me-4">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="fab fa-github"></i>
-                    </a>
+                    <p>More info:</p>
                 </div>
                 <!-- Right -->
             </section>
@@ -82,9 +61,9 @@
                             <!-- Links -->
                             <h6 class="text-uppercase fw-bold">Contact</h6>
                             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <p><i class="fas fa-home mr-3"></i>Manchester,England</p>
-                            <p><i class="fas fa-envelope mr-3"></i>tobi_Adegoroye@yahoo.com</p>
-                            <p><i class="fas fa-phone mr-3"></i>07527594067</p>
+                            <p><i class="fas fa-home me-2"></i>Manchester,England</p>
+                            <p><i class="fas fa-envelope me-2"></i>tobi_Adegoroye@yahoo.com</p>
+                            <p><i class="fas fa-phone me-2"></i>07527594067</p>
                         </div>
                         <!-- Grid column -->
                     </div>
@@ -110,10 +89,11 @@
     <script type="text/javascript" src="Scripts/bootstrap.min.js"></script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<!-- 
+    <!-- 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
 
+    <script src="https://kit.fontawesome.com/84e8532b49.js" crossorigin="anonymous"></script>
 
-    <script src="../script.js"></script>
+    <script src="./script.js"></script>
     </body>

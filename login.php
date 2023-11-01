@@ -58,7 +58,7 @@ if (isset($_POST['login'])) {
 <body>
     <?php include('templates/header.php'); ?>
     <div class="container">
-        
+
     </div>
     <h1 class="text-center mt-5 mb-5" id="login">Login</h1>
     <div class="row">
@@ -71,32 +71,43 @@ if (isset($_POST['login'])) {
 
                             <!-- input forms -->
 
-                            <label for="title">username</label>
-                            <input type="text" name="username" class="form-control w-75 mx-auto" placeholder="Enter username">
+                            <label>Username</label>
+                            <!-- <input type="text" name="username" class="form-control w-75 mx-auto" placeholder="Enter username"> -->
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                                <input class="form-control" id="username" name="username" placeholder="Username" value="">
+                            </div>
 
                             <label>Password</label>
-                            <input type="password" name="password" class="form-control w-75 mx-auto" placeholder="Enter password" id="password">
 
-                            <label>Confirmed password</label>
-                            <input type="password" name="password" class="form-control w-75 mx-auto" placeholder="Enter comfired password" id="password">
-
-                            <input type="checkbox" onclick="myFunction()">Show Password
-
-                            <?php if ($invalid) : ?>
-                                <div class="alert alert-danger" role="alert">
-                                    Wrong password
-                                </div>
-                            <?php endif ?>
-
-
-                            <!-- Add Button -->
-                            <h4 class="card-title"></h4>
-                            <input type="submit" name="login" value="login" class="btn btn-primary btn-lg mt-2 mb-2 mx-auto w-25">
-                        </form>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                                <input class="form-control" id="password" name="password" placeholder="Password" value="">
+                                <span class="input-group-text">
+                                    <i class="fa fa-eye" id="icon" onclick="changeIcon()" style="cursor: pointer;"></i>
+                                </span>
+                            </div>
                     </div>
+
+
+                    <!-- <input type="checkbox" onclick="myFunction()">Show Password -->
+
+                    <?php if ($invalid) : ?>
+                        <div class="alert alert-danger" role="alert">
+                            Wrong password
+                        </div>
+                    <?php endif ?>
+
+
+                    <!-- Add Button -->
+                    <h4 class="card-title"></h4>
+                    <input type="submit" name="login" value="login" class="btn btn-primary btn-lg mt-2 mb-2 mx-auto w-25">
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <?php include('templates/footer.php'); ?>
 
