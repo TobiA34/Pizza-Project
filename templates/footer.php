@@ -6,7 +6,7 @@
             <section class="d-flex justify-content-between p-4 text-white" style="background-color: #21D192">
                 <!-- Left -->
                 <div class="me-5">
-                    <span>Get connected with us on social networks:</span>
+                    <span>More information:</span>
                 </div>
                 <!-- Left -->
 
@@ -56,18 +56,10 @@
                             <!-- Links -->
                             <h6 class="text-uppercase fw-bold">Products</h6>
                             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <p>
-                                <a href="#!" class="text-dark">Pizza</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-dark">ice cream</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-dark">drinks</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-dark">Seasonings</a>
-                            </p>
+                            <p>Pizza</p>
+                            <p>Ice cream</p>
+                            <p>Drinks</p>
+                            <p>Desserts</p>
                         </div>
                         <!-- Grid column -->
 
@@ -77,7 +69,7 @@
                             <h6 class="text-uppercase fw-bold">Useful links</h6>
                             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
                             <p>
-                                <a href="#!" class="text-dark">Linkedin</a>
+                                <a target="_blank" href="https://www.linkedin.com/in/tobi-adegoroye-76aab3186/" class="text-dark">Linkedin</a>
                             </p>
                             <p>
                                 <a href="https://github.com/TobiA34" target="_blank" class="text-dark">Github</a>
@@ -111,11 +103,16 @@
         <!-- Footer -->
     </div>
     <!-- End of .container -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
 
 
     <script src="../script.js"></script>

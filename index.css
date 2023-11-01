@@ -38,3 +38,7 @@
  .navbar-collapse.in {
     display: block !important;
 }
+
+.carousel-control-prev-icon {
+  color: black;
+}
