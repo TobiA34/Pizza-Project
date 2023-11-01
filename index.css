@@ -42,3 +42,21 @@
 .carousel-control-prev-icon {
   color: black;
 }
+
+ 
+ #password + .glyphicon {
+   cursor: pointer;
+   pointer-events: all;
+ }
+
+/* Styles for CodePen Demo Only */
+#wrapper {
+  max-width: 500px;
+  margin: auto;
+  padding-top: 25vh;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
