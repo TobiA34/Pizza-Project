@@ -4,8 +4,11 @@ This is a website made with PHP, HTML and CSS where you can log in and create yo
 
 # screenshot
 
-<img width="1247" alt="Screenshot 2023-10-30 at 09 47 08" src="https://github.com/TobiA34/Pizza-Project/assets/36420903/22eb066a-d688-499d-a878-01bc828f4cc5">
-<img width="1247" alt="Screenshot 2023-10-30 at 09 46 54" src="https://github.com/TobiA34/Pizza-Project/assets/36420903/9318a44f-222b-4d0e-957d-e9f52d404a4c">
+ <img width="1728" alt="Screenshot 2023-11-02 at 10 25 22" src="https://github.com/TobiA34/Pizza-Project/assets/36420903/fbb132e4-936b-43b0-9dc9-497d0024e59f">
+ <img width="1728" alt="Screenshot 2023-11-02 at 10 26 24" src="https://github.com/TobiA34/Pizza-Project/assets/36420903/0445cd35-3bf3-4e61-b512-aa39d015de64">
+<img width="1728" alt="Screenshot 2023-11-02 at 10 26 09" src="https://github.com/TobiA34/Pizza-Project/assets/36420903/2232e227-6bf7-404b-99f7-b2e9552ac77f">
+<img width="1728" alt="Screenshot 2023-11-02 at 10 25 34" src="https://github.com/TobiA34/Pizza-Project/assets/36420903/7735db6c-a5e3-4f31-aeb5-b4c007b1d695">
+ 
 
 # Language
 
