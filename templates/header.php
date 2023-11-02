@@ -19,20 +19,21 @@
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <!-- Bootstrap CSS -->
      <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
      <link rel="stylesheet" href="index.css">
 
  </head>
 
  <body>
 
-     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-         <div class="container-fluid">
-             <a class="navbar-brand" href="#">Tobi Pizzeria</a>
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
-             </button>
-             <div class="collapse navbar-collapse " id="navbarSupportedContent">
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <a class="navbar-brand" href="#">Tobi Pizza</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav mr-auto">
                  <?php if (!isset($_SESSION['user_id'])) :  ?>
 
                      <ul class="navbar-nav">
@@ -48,14 +49,7 @@
                          </li>
 
                      </ul>
-
-
                  <?php else :  ?>
-
-
-                     <div>
-
-                     </div>
                      <ul class="navbar-nav">
                          <li class="nav-item active">
                              <a class="nav-link" href="pizza.php">Create Pizza <span class="sr-only"></span></a>
@@ -82,13 +76,14 @@
                      </ul>
 
 
-                     <ul class="navbar-nav mx-auto">
+                     <ul class="navbar-nav">
                          <form action="" method="post">
                              <li><input type="submit" name="logout" value="logout" class="btn btn-outline-secondary   " href=""></li>
                          </form>
                      </ul>
 
                  <?php endif; ?>
-             </div>
+             </ul>
+
          </div>
      </nav>

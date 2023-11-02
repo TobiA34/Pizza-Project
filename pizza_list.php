@@ -62,28 +62,31 @@ if (isset($_POST['upload'])) {
 <!DOCTYPE html>
 <html>
 <?php include('templates/header.php') ?>
-<div class="container-lg mt-5">
+<div class="container container-fluid mt-5">
     <h1 class="text-center">Pizza Orders</h1>
-    <div class="row m-4">
+    <div class="row bg-danger m-4">
         <?php foreach ($pizzas as $pizza) : ?>
-            <div class="col-6 col-sm-4 w-50 mx-auto m-4">
-                <div class="card h-100 text-center rounded m-4  mx-auto">
-                    <div class="card-body full_screen rounded w-100" id="pizza-order-card">
-                        <h4 class="card-title  w-100">
+            <div class=" col-6 col-sm-4 w-100  mx-auto m-4">
+                <div class="card text-center rounded  mx-auto" style="width:100%; ">
+                    <div class="card-body w-100  rounded" id="pizza-order-card">
+                        <p>
                             <ul class="list-unstyled">
                                 <img class="img-fluid rounded rounded-9 " src="image/<?php echo $pizza['imgFile'] ?>">
-                                <h1 class="mt-3 mb-3"><?php echo htmlspecialchars($pizza['title']) ?></h1>
-                                <h1 class="mt-4"> This pizza was made with <?php echo "This pizza was mad with {$pizza['toppings']} ." ?>
-                                </h1>
+                                <p class="mt-3 mb-3"><?php echo htmlspecialchars($pizza['title']) ?></p>
+                                <p class="mt-4"> This pizza was made with <?php echo "This pizza was mad with {$pizza['toppings']} ." ?>
+        </p>
 
                             </ul>
-
-                        </h4>
+                         </p>
                     </div>
 
+                    <div class="container mt-3 mb-3">
+
+                        <button type="button" class="btn button1" data-toggle="modal" data-target="#moreInfo<?php echo $pizza['id']; ?>">More info</button>
+                    </div>
 
                     <form action="pizza_list.php" method="post" enctype="multipart/form-data">
-                        <input type="file" name="image" class="form-control w-50 mx-auto m-3">
+                        <input type="file" name="image" class="form-control w-100 mx-auto m-3">
                         <input type="hidden" name="old_image" value="<?php echo $pizza['imgFile'] ?>">
                         <input type="hidden" name="pizzaID" value="<?php echo $pizza['id'] ?>" />
                         <input type="submit" name="upload" value="upload">
@@ -103,6 +106,7 @@ if (isset($_POST['upload'])) {
                                 <div class="card-body mx-auto text-center ">
                                     <h4><?php echo htmlspecialchars($pizza['title']) ?></h4>
                                     <p>Created by <?php echo htmlspecialchars($_SESSION['firstName']) ?></p>
+                                    <p>Date:<?php echo date($pizza['created_At']) ?></p>
                                     <p>Toppings:<?php echo htmlspecialchars($pizza['toppings']) ?></p>
 
                                     <!-- Delete Form -->
@@ -118,52 +122,8 @@ if (isset($_POST['upload'])) {
                                 </div>
                             </div>
 
-
                         </div>
                     </div>
-
-                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalToggleLabel">
-                                        <h4><?php echo htmlspecialchars($pizza['title']) ?></h4>
-                                    </h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <h4><?php echo htmlspecialchars($pizza['title']) ?></h4>
-                                    <p>Created by <?php echo htmlspecialchars($_SESSION['firstName']) ?></p>
-                                    <p>Toppings:<?php echo htmlspecialchars($pizza['toppings']) ?></p>
-
-                                    <!-- Delete Form -->
-                                    <form action="details.php" method="post">
-                                        <input type="hidden" name="id_to_delete" value="<?php echo $_SESSION['pizza_id'] = $pizza['id'] ?>">
-                                        <input type="submit" name="delete" value="Delete" class="btn btn-danger w-75 mx-auto mt-2 mb-2">
-                                    </form>
-                                    <!-- Update Form -->
-                                    <a type="submit" name="more-info" href="update_pizza.php?id=<?php echo $pizza['id'] ?>" value="more info" class="btn btn-primary w-75 mx-auto mt-2 mb-2">Update</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Hide this modal and show the first with the button below.
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary w-50 mx-auto mb-2" data-bs-toggle="modal" data-target="#moreInfo<?php echo $pizza['id']; ?>" href="#exampleModalToggle" role="button">More info</a>
 
                 </div>
             </div>
