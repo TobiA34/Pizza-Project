@@ -63,21 +63,21 @@ if (isset($_POST['upload'])) {
 <html>
 <?php include('templates/header.php') ?>
 <div class="container container-fluid mt-5">
-    <h1 class="text-center">Pizza Orders</h1>
-    <div class="row bg-danger m-4">
+    <h1 class="text-center">Orders</h1>
+    <div class="row m-2">
         <?php foreach ($pizzas as $pizza) : ?>
-            <div class=" col-6 col-sm-4 w-100  mx-auto m-4">
-                <div class="card text-center rounded  mx-auto" style="width:100%; ">
+            <div class=" col-6 col-sm-4  mx-auto m-4" style="width:100%;">
+                <div class="card text-center rounded  mx-auto" style="width:100%;">
                     <div class="card-body w-100  rounded" id="pizza-order-card">
                         <p>
-                            <ul class="list-unstyled">
-                                <img class="img-fluid rounded rounded-9 " src="image/<?php echo $pizza['imgFile'] ?>">
-                                <p class="mt-3 mb-3"><?php echo htmlspecialchars($pizza['title']) ?></p>
-                                <p class="mt-4"> This pizza was made with <?php echo "This pizza was mad with {$pizza['toppings']} ." ?>
-        </p>
+                        <ul class="list-unstyled">
+                            <img class="img-fluid rounded rounded-9 " src="image/<?php echo $pizza['imgFile'] ?>" style="height:300px; width:300px;">
+                            <p class="mt-3 mb-3"><?php echo htmlspecialchars($pizza['title']) ?></p>
+                            <p class="mt-4"> This pizza was made with <?php echo "This pizza was mad with {$pizza['toppings']} ." ?>
+                            </p>
 
-                            </ul>
-                         </p>
+                        </ul>
+                        </p>
                     </div>
 
                     <div class="container mt-3 mb-3">
@@ -86,7 +86,7 @@ if (isset($_POST['upload'])) {
                     </div>
 
                     <form action="pizza_list.php" method="post" enctype="multipart/form-data">
-                        <input type="file" name="image" class="form-control w-100 mx-auto m-3">
+                        <input type="file" name="image" class="form-control w-100 mx-auto l-3 pr-3">
                         <input type="hidden" name="old_image" value="<?php echo $pizza['imgFile'] ?>">
                         <input type="hidden" name="pizzaID" value="<?php echo $pizza['id'] ?>" />
                         <input type="submit" name="upload" value="upload">

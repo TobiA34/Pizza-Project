@@ -51,7 +51,7 @@ if (isset($_GET['id'])) {
 <div class="container">
     <?php if ($pizza) :  ?>
         <div class="container">
-            <h1 class="text-center">Update pizza </h1>
+            <h1 class="text-center">Update Order </h1>
             <h1 class="text-center"><?php echo $_SESSION['pizza_id']; ?> </h1>
 
             <div class="card  mt-3 mb-3 mx-auto" w-100>
