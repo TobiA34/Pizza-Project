@@ -31,7 +31,7 @@ mysqli_select_db($conn, $dbname);
 // if there's an old version of our table, then drop it:
 
 // Username, password and database name
-$conn = new mysqli('localhost', 'test1', 'pokemoN12', $dbname);
+$conn = new mysqli('', '', '', $dbname);
 
 $sql = "DROP TABLE IF EXISTS users";
 
